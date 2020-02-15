@@ -1,4 +1,4 @@
-// donats la velocitat mitjana díun cotxe i la dist‡ncia a recÛrrer es calcula el temps que trigar‡ a fer-la.
+// donats la velocitat mitjana d‚Äôun cotxe i la dist√†ncia a rec√≥rrer es calcula el temps que trigar√† a fer-la.
 #include <iostream>
 using namespace std;
 int main(){
@@ -24,6 +24,4 @@ int main(){
             cout<<"Trigaras "<<t<<" segons"<<endl;
         }
     }
-    system("pause");
-    return 0;
 }
