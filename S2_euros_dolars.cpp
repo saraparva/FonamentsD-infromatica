@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 int main(){
-    bool moneda;
+    string moneda;
     float dinero,dinerof;
     cout<<"Introdueix una quantitat i la moneda que vol modificar (euros/dolars): ";
     cin>>dinero>>moneda;
-    if (moneda==1){
+    if (moneda=="euros"){
         dinerof=dinero*1.08;
         cout<<dinero<<" "<<moneda<<" en dolars son: "<<dinerof<<" dolars"<<endl;
     }
