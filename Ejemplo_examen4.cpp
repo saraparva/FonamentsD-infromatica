@@ -6,7 +6,7 @@ int main(){
     char complexio,sexe;
     cout<<"Indica la teva alcada, el teu pes, la teva complexio (R,P,N) i el teu sexe (H,D): "<<endl;
     cin>>h>>w>>complexio>>sexe;
-    if (1.12<(h/w)<3.80 && (sexe=='D'||sexe=='H')){
+    if (1.12<(h/w) && (h/w)<3.80 && (sexe=='D'||sexe=='H')){
         if (sexe=='D'){
             Wid=45.35+((h-152.4)/2.54)*2.267;}
         else{
