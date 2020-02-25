@@ -4,7 +4,7 @@ const float TB=0.45;
 int main(){
     int num,prefix,horai,hi,mi,horaf,hf,mf,minuts;
     float preu;
-    cout<<"Indica l'hora d'inici i de finalitzaci— (hhmm) i el numero al que vols trucar:"<<endl;
+    cout<<"Indica l'hora d'inici i de finalitzaciâ€” (hhmm) i el numero al que vols trucar:"<<endl;
     cin>>horai>>horaf>>num;
     hi=horai/100; mi=horai%100;
     hf=horaf/100; mf=horaf%100;
