@@ -16,7 +16,6 @@ int main(){
             Wid+=Wid*0.1;}
         else{if(complexio=='P'){
                 Wid-=Wid*0.1;}
-            else{Wid=Wid;}}
 
         if((w-Wid)<=1){
             oro=1;}
