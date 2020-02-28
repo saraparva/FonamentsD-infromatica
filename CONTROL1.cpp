@@ -7,7 +7,7 @@ int main(){
     cin>>a>>b;
     condicio1=(-255<a && a!=0 && a<255 && -255<b && b!=0 && b<255);
     condicio2=(a%2!=0 && b%2==0);
-    condicio3=(b=='A' || b=='B' || b=='C' || b=='D' || b=='E' || b=='F' || b=='G' || b=='H' || b=='I' || b=='J' || b=='K' || b=='L' || b=='M' || b=='N' || b=='O' || b=='P' || b=='Q' || b=='R' || b=='S' || b=='T' || b=='U' || b=='V' || b=='W' || b=='X' || b=='Y' || b=='Z');
+    condicio3=(b>='A' && b<='Z');
     if(condicio1){
         if(condicio2){
             cout<<"Es compleix la primera condicio."<<endl;
