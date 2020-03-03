@@ -7,7 +7,7 @@ int main(){
     cout<<"1.Suma"<<endl;
     cout<<"2.Resta"<<endl;
     cout<<"3.Sortir"<<endl;
-    cout<<"Seleccoineu una opció:"<<endl;
+    cout<<"Seleccoineu una opciÃ³:"<<endl;
     cin>>opc;
     switch(opc){
         case 1:
