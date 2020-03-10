@@ -12,7 +12,7 @@ float factorial(int num){
 }
 
 int main(){
-    istream F("Fitxer.cpp");
+    ifstream F("Fitxer.cpp");
     int num;
     while(F>>num){
         cout<<"El factorial del teu nombre es: "<<factorial(num)<<endl;
