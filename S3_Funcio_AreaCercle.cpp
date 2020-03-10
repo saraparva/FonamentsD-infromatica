@@ -17,6 +17,6 @@ int main(){
     cin>>a>>b;
     cout<<"Introdueix les coordenades d'un punt de la circumferencia: ";
     cin>>x>>y;
-    radi=distancia(a,x,b,y);
+    radi=distancia(a,b,x,y);
     cout<<"L'area del cercle es: "<<areaCercle(radi)<<endl;
 }
