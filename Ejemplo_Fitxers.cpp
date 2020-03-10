@@ -1,4 +1,5 @@
 //Programa que llegeix un fitxer d'una llista de nombres i escriu quantes vegades surt el 33
+//Necesitem un archiu de text anomenat facil.txt
 #include <iostream>
 #include <fstream>
 using namespace std;
