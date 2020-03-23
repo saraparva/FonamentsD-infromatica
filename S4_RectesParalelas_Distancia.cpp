@@ -9,10 +9,10 @@ int val_absolut(float x){
     return x;
 }
 
-bool son_paraleles(float A1, float B1, float C1, float A2, float B2, float C2, float y){
+bool son_paraleles(float A1, float B1, float C1, float A2, float B2, float C2, float n){
     float suma;
     if ((A1/A2)==(B1/B2)){
-        suma=B2*y+C2;
+        suma=B2*n+C2;
         if (suma==0){
             return false;}
         else{ return true;}
@@ -28,14 +28,22 @@ float distancia(float A, float B, float C, float x, float y){
 }
 
 int main(){
-    float A1,B1,C1,A2,B2,C2,X=0,Y;
+    float A1,B1,C1,A2,B2,C2,X,Y;
     bool paraleles;
     cout<<"Escriu la primera funcio d'una recta tipus Ax+By+C=0 (escriu A B C): ";
     cin>>A1>>B1>>C1;
     cout<<"Escriu la segona funcio d'una recta tipus Ax+By+C=0 (escriu A B C): ";
     cin>>A2>>B2>>C2;
-    Y=-C1/B1;
-    paraleles=son_paraleles(A1,B1,C1,A2,B2,C2,Y);
+    if(B1!=0){
+        X=0
+        Y=-C1/B1;
+        paraleles=son_paraleles(A1,B1,C1,A2,B2,C2,Y);
+    }
+    else{
+        X=-C1/A1;
+        Y=0;
+        paraleles=son_paraleles(A1,B1,C1,A2,B2,C2,X);
+    }   
     if (paraleles){
         cout<<"Les dos rectes son paraleles"<<endl;
         cout<<"La distancia entre les dues rectes es: "<<distancia(A2,B2,C2,X,Y)<<endl;
