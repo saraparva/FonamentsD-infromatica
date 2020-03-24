@@ -27,6 +27,18 @@ float distancia(float A, float B, float C, float x, float y){
     return D;
 }
 
+void calcul_punt(float A, float B, float C){
+    float x,y;
+    if(B!=0){
+        x=0;
+        y=-C/B;
+    }
+    else{
+        x=-C/A;
+        y=0;
+    }
+}
+
 int main(){
     float A1,B1,C1,A2,B2,C2,X,Y;
     bool paraleles;
@@ -34,15 +46,8 @@ int main(){
     cin>>A1>>B1>>C1;
     cout<<"Escriu la segona funcio d'una recta tipus Ax+By+C=0 (escriu A B C): ";
     cin>>A2>>B2>>C2;
-    if(B1!=0){
-        X=0
-        Y=-C1/B1;
-    }
-    else{
-        X=-C1/A1;
-        Y=0;
-    }
-    paraleles=son_paraleles(A1,B1,C1,A2,B2,C2,X,Y)
+    calcul_punt(A1,B1,C1);
+    paraleles=son_paraleles(A1,B1,C1,A2,B2,C2,X,Y);
     if (paraleles){
         cout<<"Les dos rectes son paraleles"<<endl;
         cout<<"La distancia entre les dues rectes es: "<<distancia(A2,B2,C2,X,Y)<<endl;
@@ -51,4 +56,3 @@ int main(){
         cout<<"Les dos rectes donades no son paraleles"<<endl;
     }
 }
-
