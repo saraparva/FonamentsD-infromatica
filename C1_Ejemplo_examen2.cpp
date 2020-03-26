@@ -9,15 +9,15 @@ int main(){
         s+=x;
         if(s>=60){
             s%=60;
-		 	m++;
-		 	if(m>=60){
-                m%=60; h++;
+	    m++;
+	    if(m>=60){
+        	m%=60; 
+		h++;
             }
-        }
-		if(h>=12){
-            h%=12;}
-        cout<< "sortida: "<<h<<":"<<m<<":"<<s;
-	 }
-	 else {
-        cout << "Entrada erronea"<<endl;}
+	    if(h>=12){
+                h%=12;}
+            cout<< "sortida: "<<h<<":"<<m<<":"<<s;
+	}
+	else {
+            cout << "Entrada erronea"<<endl;}
 }
