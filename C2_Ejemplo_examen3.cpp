@@ -2,8 +2,8 @@
 #include <fstream>
 using namespace std;
 
-int SumParells(int n);
-int SumSenars (int n);
+int SumParells(long int n);
+int SumSenars (long int n);
 
 int main(){
     ifstream fi("Mod1C2.txt");
@@ -19,7 +19,7 @@ int main(){
     cout<<(float(sums)/sumn)*100<<" %"<<endl;
 }
 
-int SumParells(int n){
+int SumParells(long int n){
     int sump=0;
     n/=10;
     while(n>0){
@@ -29,7 +29,7 @@ int SumParells(int n){
     return sump;
 }
 
-int SumSenars(int n){
+int SumSenars(long int n){
     int sums=0;
     while(n>0){
         sums+=n%10;
