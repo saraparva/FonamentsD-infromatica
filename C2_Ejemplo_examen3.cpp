@@ -7,7 +7,8 @@ int SumSenars (int n);
 
 int main(){
     ifstream fi("Mod1C2.txt");
-    int sump=0,sums=0,sumn=0,num;
+    long int n;
+    int sump=0,sums=0,sumn=0;
     while(fi>>num){
         sumn++;
         if (SumParells(num)>SumSenars(num)){
