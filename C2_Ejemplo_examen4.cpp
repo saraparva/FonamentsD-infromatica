@@ -9,7 +9,7 @@ void separar_data(int data, int &dia, int &mes, int &any){
 }
 
 float retornXdata(int data,float despeses){
-    int dia, mes, any, consum, retorn=0,euros;
+    int dia, mes, any, retorn=0,euros;
     separar_data(data,dia,mes,any);
     if (mes%2!=0){
         if (dia<=15){
@@ -21,11 +21,12 @@ float retornXdata(int data,float despeses){
     if (mes>=6 && mes<=9){
         retorn+=0.05;}
     euros=despeses*retorn;
+    return euros;
 }
 
 float retornXmes(int despesesMes){
     int i,euros=0;
-    for(i=1;i<despeses/100;i++){
+    for(i=1;i<despesesMes/100;i++){
         euros+=despesesMes*0.5*i;
     }
     return euros;
@@ -33,12 +34,12 @@ float retornXmes(int despesesMes){
 
 int main(){
     ifstream fi("despeses.txt");
-    int data,dia, mes, any;
-    float despeses,euros=0 despesesMes=0;
+    int data;
+    float despeses,euros=0,despesesMes=0;
     while (fi>>data>>despeses){
         despesesMes+=despeses;
         euros+=retornXdata(data,despeses);
     }
-    euros+=retornMes(despesesMes);
+    euros+=retornXmes(despesesMes);
     cout<<"Euros a tornar = "<<euros<<" €"<<endl;
 }
