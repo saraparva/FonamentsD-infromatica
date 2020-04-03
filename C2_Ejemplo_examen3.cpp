@@ -22,7 +22,7 @@ int main(){
 int SumParells(long int n){
     int sump=0;
     n/=10;
-    while(n>0){
+    while(n!=0){
         sump+=n%10;
         n/=100;
     }
@@ -31,7 +31,7 @@ int SumParells(long int n){
 
 int SumSenars(long int n){
     int sums=0;
-    while(n>0){
+    while(n!=0){
         sums+=n%10;
         n/=100;
     }
