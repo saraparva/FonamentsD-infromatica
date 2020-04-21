@@ -5,11 +5,11 @@ int main(){
     bool condicio1,condicio2,condicio3;
     cout<<"Introdueix dos nombres enters: ";
     cin>>a>>b;
-    condicio1=(-255<a && a!=0 && a<255 && -255<b && b!=0 && b<255);
-    condicio2=(a%2!=0 && b%2==0);
-    condicio3=(b>='A' && b<='Z');
-    if(condicio1){
-        if(condicio2){
+    condicio=(-255<a && a!=0 && a<255 && -255<b && b!=0 && b<255);
+    condicio1=(a%2!=0 && b%2==0);
+    condicio2=(b>='A' && b<='Z');
+    if(condicio){
+        if(condicio1){
             cout<<"Es compleix la primera condicio."<<endl;
             if((a-b)>=2){
                 cout<<"El residu de dividir el primer nombre entre el segon es: "<<a%b<<endl;
@@ -24,7 +24,7 @@ int main(){
             cout<<"No es compleix la primera condicio."<<endl;}
         if(a%10==0 && a%3==0){
             a=-a;}
-        if(condicio3){
+        if(condicio2){
             b+=a;}
         cout<<"El resultat de multiplicar els valors actuals dels dos nombres es: "<<a*b<<endl;
     }
