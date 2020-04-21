@@ -7,20 +7,25 @@ void max_min (int num, int &max, int &min);
 bool Tau (int num);
 
 int main(){
-    int i, a, b, num, max, min;
+     int i, a, b, num, max, min;
     cout<<"Escriu els nombres d'un interval: ";
     cin>>a>>b;
     num=a;
     while (!Tau(num)){
         num++;
     }
-    max=num; min=num;
-    for(i=a;i<b+1;i++){
-        if(Tau(i)){
-            max_min(i,max,min);
+    if (num>=a && num<=b){
+        max=num; min=num;
+        for(i=a;i<b;i++){
+            if(Tau(i)){
+                max_min(i,max,min);
+            }
         }
+        cout<<"Per al rang ["<<a<<','<<b<<"] els nombres Tau menor i major son "<<min<<" i "<<max<<'.'<<endl;
     }
-    cout<<"Per al rang ["<<a<<','<<b<<"] els nombres Tau menor i major son "<<min<<" i "<<max<<'.'<<endl;
+    else{
+        cout<<"Per al rang ["<<a<<','<<b<<"] no hi ha cap nombre Tau."<<endl;
+    }
 }
 
 void max_min (int num, int &max, int &min){
