@@ -51,7 +51,7 @@ int main(){
             }
         }
     }
-    cout<<"La quantitat total de productes que hi ha al depósit es: "<<compt_deposito<<endl;
+    cout<<"La quantitat total de productes que hi ha al depÃ³sit es: "<<compt_deposito<<endl;
     cout<<"La quantitat total de productes que s'han de repostar es: "<<compt_reponer<<endl;
     cout<<"El codi de productes frescs en mayor quantitat es: "<<let1F<<let2F<<endl;
     cout<<"El codi de productes envasats en mayor quantitat es: "<<let1E<<let2E<<endl;
