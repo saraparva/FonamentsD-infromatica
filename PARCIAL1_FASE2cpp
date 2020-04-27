@@ -1,6 +1,3 @@
-// Nom: Sara Pardo Valero
-// DNI: 53644881A
-
 #include <iostream>
 #include <fstream>
 using namespace std;
