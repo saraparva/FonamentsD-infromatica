@@ -69,6 +69,6 @@ void codigo (char let1, char let2, bool &consonante, bool &mayuscula){
         consonante = false;
         break;
     }
-    if(let2<='A' && let2>='Z'){ mayuscula=true;}
+    if(let2>='A' && let2<='Z'){ mayuscula=true;}
     else{ mayuscula=false;}
 }
