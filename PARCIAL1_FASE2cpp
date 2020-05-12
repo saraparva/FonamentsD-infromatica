@@ -14,9 +14,7 @@ int main(){
     ofstream cout2("InventarioEnvasados.txt");
     ofstream cout3("ReposicionFrescos.txt");
     ofstream cout4("ReposicionEnvasados.txt");
-    while(let1=cinF.get()){
-        let2=cinF.get();
-        cinF>>num1>>num2;
+    while(cinF>>let1>>let2>>num1>>num2){
         bool consonante=true, mayuscula, existe=false;
         codigo(let1,let2,consonante,mayuscula);
         if(consonante){
