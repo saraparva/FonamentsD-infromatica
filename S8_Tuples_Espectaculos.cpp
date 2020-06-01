@@ -55,3 +55,8 @@ bool validar_data(data dataobs, data datai, data dataf){
     }
     return res;
 }
+
+void escriure_esp(espectacle &esp){
+    cout<<esp.nom<<": concert de "<<esp.tipus<<" des de el "<<esp.datai.dia<<'/'<<esp.dati.mes<<'/'<<esp.datai.any;
+    cout<<" fins el"<<esp.dataf.dia<<'/'<<esp.dataf.mes<<'/'<<esp.dataf.any<<" i el seu preu es: "<<esp.preu<<endl;
+}
