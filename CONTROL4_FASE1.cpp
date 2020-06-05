@@ -6,7 +6,8 @@ using namespace std;
 struct persona{
     int dni;
     char genere;
-    int edat, reg1, reg2, reg3, promedio;
+    int edat; 
+    float reg1, reg2, reg3;
 };
 
 bool sospitos(float reg1, float reg2, float reg3);
