@@ -57,7 +57,6 @@ void llegirfitxer(vector<persona> &pers){
     persona p;
     while(!fi.eof()){
         fi>>p.dni>>p.genere>>p.edat>>p.reg1>>p.reg2>>p.reg3;
-        p.promedio=promedio(p.reg1,p.reg2,p.reg3);
         pers.push_back(p);
     }
 }
@@ -68,10 +67,10 @@ void separarpergenere(vector<persona> &pers,  vector<int> &dni_dones, vector<int
     for(i=0;i<dim;i++){
         if(sospitos(pers[i].reg1, pers[i].reg2, pers[1].reg3)){
             if(pers[i].genere=='F'){ /// per veure si coincideixen;
-                dni_dones.push_back(pers[i]);
+                dni_dones.push_back(pers[i].dni);
             }
             else{ ///suposant que no hi pot haver cap altra lletra diferent de F i M;
-                dni_homes.push_back(pers[i]);
+                dni_homes.push_back(pers[i].dnni);
             }
         }
     }
