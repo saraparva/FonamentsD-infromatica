@@ -1,9 +1,3 @@
-///Nom: Sara
-///Cognoms: Pardo Valero
-///DNI: 53644881 A
-///Grup: 23
-///He tingut un problema amb el terminal i no se'm genera res per aixo només adjunto l'arxiu c++
-
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -15,18 +9,17 @@ struct persona{
     int edat, reg1, reg2, reg3, promedio;
 };
 
-float promedio(int reg1, int reg2, int reg3);
 bool sospitos(float reg1, float reg2, float reg3);
 void llegirfitxer(vector<persona> &pers);
-void separarpergenere(vector<persona> &pers,  vector<persona> &dni_dones, vector<persona> &dni_homes);
-void guardararxius(vector<persona> &pers, vector<persona> &dni_dones, vector<persona> &dni_homes);
+void separarpergenere(vector<persona> &pers,  vector<int> &dni_dones, vector<int> &dni_homes);
+void guardararxius(vector<persona> &pers, vector<int> &dni_dones, vector<int> &dni_homes);
 void estadistica(int dim, int dimdon, int dimhom);
 
 int main(){
     int opc;
     vector<persona> pers;
-    vector<persona> dni_dones;
-    vector<persona> dni_homes;
+    vector<int> dni_dones;
+    vector<int> dni_homes;
     llegirfitxer(pers);
     separarpergenere(pers,dni_dones,dni_homes);
     cout<<"MENU D'OPCIONS"<<endl;
@@ -49,13 +42,6 @@ int main(){
     }
 }
 
-float promedio(float reg1, float reg2, float reg3){
-    float mig, suma;
-    suma=reg1+reg2+reg3;
-    mig=suma/3;
-    return mig;
-}
-
 bool sospitos(float reg1, float reg2, float reg3){
     if( (reg1>37.9 && reg2>37.9) || (reg2>37.9 && reg3>37.9)){ ///si dos nombres consecutius son mayors de 37.9 es sospitos
         return true;
@@ -75,7 +61,7 @@ void llegirfitxer(vector<persona> &pers){
     }
 }
 
-void separarpergenere(vector<persona> &pers,  vector<persona> &dni_dones, vector<persona> &dni_homes){
+void separarpergenere(vector<persona> &pers,  vector<int> &dni_dones, vector<int> &dni_homes){
     int i;
     long int dim=pers.size();
     for(i=0;i<dim;i++){
@@ -90,7 +76,7 @@ void separarpergenere(vector<persona> &pers,  vector<persona> &dni_dones, vector
     }
 }
 
-void guardararxius(vector<persona> &pers, vector<persona> &dni_dones, vector<persona> &dni_homes){
+void guardararxius(vector<persona> &pers, vector<int> &dni_dones, vector<int> &dni_homes){
     ofstream dones("SospechosAs_2.txt");
     ofstream homes("SospechosOs_2.txt");
     int i;
