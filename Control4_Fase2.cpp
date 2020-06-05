@@ -1,9 +1,3 @@
-///Nom: Sara
-///Cognoms: Pardo Valero
-///DNI: 53644881 A
-///Grup: 23
-///He tingut un problema amb el terminal i no se'm genera res per aixo només adjunto l'arxiu c++
-
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -12,7 +6,8 @@ using namespace std;
 struct persona{
     int dni;
     char genere;
-    int edat, reg1, reg2, reg3, promedio;
+    int edat
+    float reg1, reg2, reg3, promedio;
 };
 
 float promedio(float reg1, float reg2, float reg3);
