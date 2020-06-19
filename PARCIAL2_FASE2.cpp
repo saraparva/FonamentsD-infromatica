@@ -1,32 +1,8 @@
-///*****************************************************************************************************
-//
-///    ES OBLIGATORIO LLENAR LA INFORMACION QUE SE SOLICITA A CONTINUACIÓN
-///
-///                                    EXAMEN FINAL -- 19 DE JUNIO
-//
-///    NOMBRE: Sara Pardo Valero
-///    DNI: 53644881A
-///    GRADO: GREFI
-///    GRUPO o PROFESOR: Marta Gatius
-//
-///                                             PROBLEMA 2
-//
-//
-
-///*****************************************************************************************************
-///                                          BIBLIOTECAS
-///*****************************************************************************************************
-
 #include <iostream>
 #include <fstream>
 #include <vector>
 using namespace std;
 
-///*****************************************************************************************************
-///                                      CONSTANTES, SI SE DECLARAN
-///*****************************************************************************************************
-
-//const . . . .
 struct hospitales{
     int codi, enfermetat, dies;
     char genere;
@@ -36,19 +12,11 @@ struct fitxer{
     int codi, hosph, hospm;
 };
 
-///*****************************************************************************************************
-///                             SUBPROGRAMAS, O EN SU CASO, ENCABEZADOS (PROTOTIPOS)
-///*****************************************************************************************************
-
 bool trobat(int codi, vector<int> &codip);
 void llegir(vector<hospitales> &h);
 void separarcodi(vector<hospitales> &h, vector<int> &codip);
 void dadessortida(vector<hospitales> &h, vector<int> &codip, vector<fitxer> &f);
 void sortir(vector<fitxer> &f);
-
-///*****************************************************************************************************
-///                                          PROGRAMA PRINCIPAL
-///*****************************************************************************************************
 
 int main(){
     long int dim;
@@ -62,9 +30,6 @@ int main(){
     sortir(f);
     cout<<"S'han afegit un nombre de "<<dim<<" files al fitxer"<<endl;
 }
-///*****************************************************************************************************
-///               DESARROLLO DE SUBPROGRAMAS SI SE OPTÓ POR HACER ENCABEZADOS O PROTOTIPOS
-///*****************************************************************************************************
 
 bool trobat(int codi, vector<int> &codip){
     int i=0;
@@ -121,7 +86,7 @@ void dadessortida(vector<hospitales> &h, vector<int> &codip, vector<fitxer> &f){
                 if(h[a].genere=='H'){
                     sumah+=h[a].dies;
                 }
-                else{ //Com que si no es H serˆ M
+                else{ //Com que si no es H serË† M
                     sumam+=h[a].dies;
                 }
             }
