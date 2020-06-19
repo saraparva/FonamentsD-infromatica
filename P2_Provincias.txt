@@ -37,7 +37,7 @@
 46	Valencia	10	Comunitat_Valenciana 3
 6	Badajoz	11	Extremadura 2
 10	Caceres	11	Extremadura 2
-15	Coruña,_A	12	Galicia 4
+15	CoruÃ±a,_A	12	Galicia 4
 27	Lugo	12	Galicia 4
 32	Ourense	12	Galicia 4
 36	Pontevedra	12	Galicia 4
