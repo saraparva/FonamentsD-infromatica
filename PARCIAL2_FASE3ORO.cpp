@@ -1,31 +1,7 @@
-///*****************************************************************************************************
-//
-///    ES OBLIGATORIO LLENAR LA INFORMACION QUE SE SOLICITA A CONTINUACIÓN
-///
-///                                    EXAMEN FINAL -- 19 DE JUNIO
-//
-///    NOMBRE: Sara Pardo Valero
-///    DNI: 53644881A
-///    GRADO: GREFI
-///    GRUPO o PROFESOR: Marta Gatius
-//
-///                                             PROBLEMA 3
-//
-//
-
-///*****************************************************************************************************
-///                                          BIBLIOTECAS
-///*****************************************************************************************************
-
 #include <iostream>
 #include <fstream>
 #include <vector>
 using namespace std;
-
-///*****************************************************************************************************
-///                                      CONSTANTES, SI SE DECLARAN
-///*****************************************************************************************************
-
 
 struct fitxer2{
     int cpr,cca, num;
@@ -36,10 +12,6 @@ struct fitxer1{
     int codi, hosph, hospm;
 };
 
-///*****************************************************************************************************
-///                             SUBPROGRAMAS, O EN SU CASO, ENCABEZADOS (PROTOTIPOS)
-///*****************************************************************************************************
-
 int BuscarCA(vector<fitxer2> &f2, int codip);
 int sumahosp(vector<fitxer1> &f1);
 void LeerDatos(vector<fitxer1> &f1, vector<fitxer2> &f2);
@@ -47,10 +19,6 @@ void BuscarDatos(vector<fitxer1> &f1, int codi);
 void CalculaComunitat(vector<fitxer1> &f1, vector<fitxer2> &f2, int codica, int &sumah, int &sumam);
 void EstadisticaOcupacio(int &sumah, int &sumam, vector<fitxer1> &f1, int codip);
 void MMenu();
-
-///*****************************************************************************************************
-///                                          PROGRAMA PRINCIPAL
-///*****************************************************************************************************
 
 int main(){
     int opc, codip, codica, sumah, sumam;
@@ -60,7 +28,7 @@ int main(){
     LeerDatos(f1, f2);
     while(continuar){
         cout<<"MENU PRINCIPAL"<<endl;
-        cout<<"1. Posici— de la provincia"<<endl;
+        cout<<"1. Posiciâ€” de la provincia"<<endl;
         cout<<"2. Nombre hospitalitzacions a una comunitat autonoma"<<endl;
         cout<<"3. Estadistiques d'una provincia"<<endl;
         cout<<"4. Sortir"<<endl;
@@ -68,7 +36,7 @@ int main(){
         if(opc>=1 && opc<=4){
             switch (opc) {
                 case 1:
-                    cout<<"Indica el codi de la provincia de la que vols saber la posici—"<<endl;
+                    cout<<"Indica el codi de la provincia de la que vols saber la posiciâ€”"<<endl;
                     cin>>codip;
                     BuscarDatos(f1, codip);
                     break;
@@ -94,10 +62,6 @@ int main(){
         }
     }
 }
-
-///*****************************************************************************************************
-///               DESARROLLO DE SUBPROGRAMAS SI SE OPTÓ POR HACER ENCABEZADOS O PROTOTIPOS
-///*****************************************************************************************************
 
 int BuscarCA(vector<fitxer2> &f2, int codip){
     int i=0;
@@ -149,7 +113,7 @@ void BuscarDatos(vector<fitxer1> &f1, int codi){
         else{i++;}
     }
     if(trobat){
-        cout<<"La provincia cercada es troba a la porsici— "<<compt<<" de l'arxiu"<<endl;
+        cout<<"La provincia cercada es troba a la porsiciâ€” "<<compt<<" de l'arxiu"<<endl;
     }
     else{
         cout<<"El codi de provincia introduit no existeix"<<endl;
@@ -196,8 +160,8 @@ void EstadisticaOcupacio(int &sumah, int &sumam, vector<fitxer1> &f1, int codip)
         else{i++;}
     }
     if(trobat){
-        cout<<"Percentatge de hospitalitzaci— de dones respecte al total de la provincia: "<<(float(f1[i].hospm)/(f1[i].hospm+f1[i].hosph))*100<<" %"<<endl;
-        cout<<"Percentatge de hospitalitzaci— de homes respecte al total de la provincia: "<<(float(f1[i].hosph)/(f1[i].hospm+f1[i].hosph))*100<<" %"<<endl;
+        cout<<"Percentatge de hospitalitzaciâ€” de dones respecte al total de la provincia: "<<(float(f1[i].hospm)/(f1[i].hospm+f1[i].hosph))*100<<" %"<<endl;
+        cout<<"Percentatge de hospitalitzaciâ€” de homes respecte al total de la provincia: "<<(float(f1[i].hosph)/(f1[i].hospm+f1[i].hosph))*100<<" %"<<endl;
         cout<<"Percentatge de hospitalitzacions de la provincia respecte el pais: "<<(float(f1[i].hospm+f1[i].hosph)/sumahosp(f1))*100<<" %"<<endl;
         cout<<"Percentatge de hospitalitzacions de la provincia respecte la comunitat autonoma: "<<(float(f1[i].hospm+f1[i].hosph)/(sumam+sumah))*100<<" %"<<endl;
         cout<<"Percentatge de hospitalitzacions de la comunitat autonoma respecte el pais: "<<(float(sumam+sumah)/sumahosp(f1))*100<<" %"<<endl;
